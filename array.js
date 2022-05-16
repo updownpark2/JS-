@@ -48,7 +48,7 @@ fruits.shift()
 
 //3.지정된 아이템을 삭제하자!
 const fruits = ["🍎","🥭","🍌","🍓"];
-fruits.splice(1)//.splice(여기부터,먗개?)
+fruits.splice(1)//.splice(여기부터,먗개?,추가할거)
 console.log(fruits)
 
 const fruits = ["🍎","🥭","🍌","🍓"];
@@ -69,3 +69,10 @@ console.log(fruits.includes("🍎")) // 결과값 true
 
 const fruits = ["🍎","🥭","🍌","🍓","🍎"];
 console.log(fruits.lastIndexOf("🍎"))//결과값 4 이는 찾고자하는마지막 데이터를 구함
+
+
+let A=[];
+    for(let i=1; i=5;i++){
+    A.push(i) }
+console.log(A)
+    
