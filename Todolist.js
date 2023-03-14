@@ -21,3 +21,9 @@ Form.addEventListener("submit", (event) => {
 //데이터담기
 
 //이제 데이터 그리기
+
+function Paint() {
+  const Ul = document.createElement("ul");
+  root.appendChild(Ul);
+  Ul.innerHTML = `<li>${todolist}<button>삭젱</button></li>`;
+}
