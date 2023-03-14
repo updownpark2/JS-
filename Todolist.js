@@ -8,3 +8,16 @@ Form.appendChild(Button);
 
 Input.placeholder = "Todolist";
 Button.innerText = "제출!!!";
+
+let todolist;
+
+Form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  todolist = event.target[0].value;
+  event.target[0].value = "";
+  Paint();
+});
+
+//데이터담기
+
+//이제 데이터 그리기
