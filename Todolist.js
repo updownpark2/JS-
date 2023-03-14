@@ -18,16 +18,27 @@ Form.addEventListener("submit", (event) => {
   todolist.push(event.target[0].value);
   event.target[0].value = "";
   Paint();
-  Remove();
 });
 
 //데이터담기
-
 //이제 데이터 그리기
 
 function Paint() {
   const Ul = document.querySelector("ul");
   Ul.innerHTML = `${todolist
-    .map((item) => `<li>${item}<button class="REMOVE">삭젱</button></li>`)
+    .map(
+      (item, index) =>
+        `<li id=${index}>${item}<button class="REMOVE">삭젱</button></li>`
+    )
     .join(``)}`;
+  const RemoveButton = document.querySelectorAll(".REMOVE");
+  RemoveButton.forEach((button) =>
+    button.addEventListener("click", (event) => {
+      console.log("asd");
+      todolist = todolist.filter(
+        (item, index) => index * 1 !== event.target.parentElement.id * 1
+      );
+      Paint();
+    })
+  );
 }
