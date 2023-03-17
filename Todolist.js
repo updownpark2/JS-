@@ -31,6 +31,7 @@ function Paint() {
         `<li id=${index}>${item}<button class="REMOVE">삭젱</button></li>`
     )
     .join(``)}`;
+
   const RemoveButton = document.querySelectorAll(".REMOVE");
   RemoveButton.forEach((button) =>
     button.addEventListener("click", (event) => {
